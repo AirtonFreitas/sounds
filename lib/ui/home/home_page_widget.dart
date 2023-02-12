@@ -29,16 +29,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   }
 
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: [SizedBox(height: 32,),
-            Container(
-            child: getBanner(AdmobBannerSize.BANNER),
-          ),
+          children: [const SizedBox(height: 32,),
             _widgetOptions.elementAt(_selectedIndex),
             Container(
               child: getBanner(AdmobBannerSize.BANNER),
@@ -56,7 +52,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: ColorsUtils.yellowNav,
-        onTap:_onItemTapped,
+        onTap: _onItemTapped,
       ),
     );
   }
@@ -82,6 +78,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
   }
 
   void showInterstitial() {
-      interstitialAd.show();
+    interstitialAd.show();
   }
 }
